@@ -272,17 +272,6 @@ header.hero,section,footer{position:relative;z-index:2;}
 #soundwave{position:fixed;bottom:0;left:0;width:100%;height:56px;pointer-events:none;z-index:9997;opacity:0;transition:opacity 0.6s ease;}
 #soundwave.visible{opacity:1;}
 #soundwave canvas{display:block;width:100%;height:56px;}
-.visitor-box{
-  margin-top:12px;
-  color:#fff;
-  font-size:.9rem;
-  font-weight:600;
-  background:rgba(255,255,255,.12);
-  backdrop-filter:blur(8px);
-  padding:8px 16px;
-  border-radius:30px;
-  display:inline-block;
-}
 </style>
 </head>
 <body>
@@ -450,7 +439,7 @@ header.hero,section,footer{position:relative;z-index:2;}
     <a href="tel:0951292989" class="cta-btn">📲 โทรเลย</a>
     <div class="footer-copy">© 2026 Mum Soong Production · All Rights Reserved</div>
   </div>
-<div class="visitor-box"> มีผู้เข้าชมแล้ว <span id="count">...</span> คน</div>
+  <div class="visitor-box">มีผู้เข้าชมแล้ว <span id="count">...</span> คน</div>
 </footer>
 <a href="#top" id="toTop" aria-label="กลับไปด้านบน">↑</a>
 <script>
@@ -478,6 +467,10 @@ header.hero,section,footer{position:relative;z-index:2;}
   function drawIdleWave(){rafId=requestAnimationFrame(drawIdleWave);idleT+=0.04;ctx2d.clearRect(0,0,canvas.width,canvas.height);const grad=ctx2d.createLinearGradient(0,0,canvas.width,0);grad.addColorStop(0,'rgba(174,226,255,0)');grad.addColorStop(0.5,'rgba(47,128,196,0.35)');grad.addColorStop(1,'rgba(174,226,255,0)');ctx2d.lineWidth=2;ctx2d.strokeStyle=grad;ctx2d.shadowBlur=4;ctx2d.shadowColor='rgba(47,128,196,0.3)';ctx2d.beginPath();for(let x=0;x<=canvas.width;x+=2){const y=canvas.height/2+Math.sin(x*0.018+idleT)*6+Math.sin(x*0.008+idleT*0.7)*3;x===0?ctx2d.moveTo(x,y):ctx2d.lineTo(x,y);}ctx2d.stroke();}
   waveEl.classList.add('visible');drawIdleWave();
   btn.addEventListener('click',async()=>{initAudio();if(audioCtx.state==='suspended')await audioCtx.resume();if(!isPlaying){try{await audio.play();isPlaying=true;btnIcon.textContent='🔊';btn.classList.add('playing');cancelAnimationFrame(rafId);drawWave();}catch(e){console.warn('Audio play failed:',e);btnIcon.textContent='⚠️';}}else{audio.pause();isPlaying=false;btnIcon.textContent='🔇';btn.classList.remove('playing');cancelAnimationFrame(rafId);drawIdleWave();}});
+  fetch('https://api.counterapi.dev/v1/mumsoong-production/visits/up')
+    .then(r=>r.json())
+    .then(d=>{document.getElementById('count').textContent=d.count.toLocaleString();})
+    .catch(()=>{document.getElementById('count').textContent='—';});
 </script>
 </body>
 </html>

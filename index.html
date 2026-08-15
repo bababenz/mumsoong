@@ -101,7 +101,6 @@ section{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:3rem 
 .section-heading .halo{position:absolute;top:50%;left:50%;width:220px;height:60px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(ellipse,rgba(255,194,51,0.18) 0%,transparent 70%);pointer-events:none;opacity:0;transition:opacity 0.8s ease 0.4s;filter:blur(6px);}
 .section-heading.in-view .halo{opacity:1;}
 .section-heading .mini-drone{position:absolute;font-size:1rem;opacity:0;pointer-events:none;animation:mini-float 4s ease-in-out infinite;transition:opacity 0.4s ease 0.6s;}
-.section-heading.in-view .mini-drone{opacity:0.7;}
 .section-heading .mini-drone.md1{top:-20px;left:calc(50% - 120px);animation-delay:0s;}
 .section-heading .mini-drone.md2{top:-15px;right:calc(50% - 120px);animation-delay:1.2s;}
 @keyframes mini-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
@@ -146,6 +145,9 @@ h2::after{content:"";display:block;width:50px;height:4px;background:var(--mustar
 .live-badge .dot{width:6px;height:6px;border-radius:50%;background:#fff;animation:live-dot 1.5s ease-in-out infinite;}
 @keyframes live-pulse{0%,100%{box-shadow:0 2px 8px rgba(255,60,60,0.5);}50%{box-shadow:0 2px 16px rgba(255,60,60,0.9);}}
 @keyframes live-dot{0%,100%{opacity:1;}50%{opacity:0;}}
+.gallery-grid .video-wrap .fb-fallback{position:absolute;left:0;right:0;bottom:0;z-index:4;display:flex;justify-content:center;padding:8px 0;background:linear-gradient(to top,rgba(0,0,0,0.55),transparent);}
+.gallery-grid .video-wrap .fb-fallback a{color:#fff;font-size:0.72rem;font-weight:700;text-decoration:none;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);padding:4px 12px;border-radius:20px;backdrop-filter:blur(4px);}
+.gallery-grid .video-wrap .fb-fallback a:hover{background:rgba(255,194,51,0.3);border-color:rgba(255,194,51,0.5);}
 
 /* VIDEO CARD — full layout top/mid/bottom */
 .gallery-grid .video-card{
@@ -368,30 +370,39 @@ header.hero,section,footer{position:relative;z-index:2;}
       <div class="video-wrap">
         <div class="live-badge"><span class="dot"></span>FEATURED</div>
         <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F780253781721651%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="fb-fallback"><a href="https://www.facebook.com/reel/780253781721651" target="_blank" rel="noopener">เปิดคลิปนี้บน Facebook ↗</a></div>
       </div>
       <div class="video-wrap">
         <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1660658905163110%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="fb-fallback"><a href="https://www.facebook.com/reel/1660658905163110" target="_blank" rel="noopener">เปิดคลิปนี้บน Facebook ↗</a></div>
       </div>
       <div class="video-wrap">
         <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2870578639964016%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="fb-fallback"><a href="https://www.facebook.com/reel/2870578639964016" target="_blank" rel="noopener">เปิดคลิปนี้บน Facebook ↗</a></div>
       </div>
       <div class="video-wrap">
         <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F996234299926107%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="fb-fallback"><a href="https://www.facebook.com/reel/996234299926107" target="_blank" rel="noopener">เปิดคลิปนี้บน Facebook ↗</a></div>
       </div>
       <div class="video-wrap">
         <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F4124952197811003%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="fb-fallback"><a href="https://www.facebook.com/reel/4124952197811003" target="_blank" rel="noopener">เปิดคลิปนี้บน Facebook ↗</a></div>
       </div>
       <div class="video-wrap">
         <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F3446151738888118%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="fb-fallback"><a href="https://www.facebook.com/reel/3446151738888118" target="_blank" rel="noopener">เปิดคลิปนี้บน Facebook ↗</a></div>
       </div>
       <div class="video-wrap">
         <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F27530924059883352%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="fb-fallback"><a href="https://www.facebook.com/reel/27530924059883352" target="_blank" rel="noopener">เปิดคลิปนี้บน Facebook ↗</a></div>
       </div>
       <div class="video-wrap">
         <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2530008304143244%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="fb-fallback"><a href="https://www.facebook.com/reel/2530008304143244" target="_blank" rel="noopener">เปิดคลิปนี้บน Facebook ↗</a></div>
       </div>
       <div class="video-wrap">
         <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1060508226675862%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="fb-fallback"><a href="https://www.facebook.com/reel/1060508226675862" target="_blank" rel="noopener">เปิดคลิปนี้บน Facebook ↗</a></div>
       </div>
     </div>
 
@@ -488,9 +499,9 @@ header.hero,section,footer{position:relative;z-index:2;}
   function drawIdleWave(){rafId=requestAnimationFrame(drawIdleWave);idleT+=0.04;ctx2d.clearRect(0,0,canvas.width,canvas.height);const grad=ctx2d.createLinearGradient(0,0,canvas.width,0);grad.addColorStop(0,'rgba(174,226,255,0)');grad.addColorStop(0.5,'rgba(47,128,196,0.35)');grad.addColorStop(1,'rgba(174,226,255,0)');ctx2d.lineWidth=2;ctx2d.strokeStyle=grad;ctx2d.shadowBlur=4;ctx2d.shadowColor='rgba(47,128,196,0.3)';ctx2d.beginPath();for(let x=0;x<=canvas.width;x+=2){const y=canvas.height/2+Math.sin(x*0.018+idleT)*6+Math.sin(x*0.008+idleT*0.7)*3;x===0?ctx2d.moveTo(x,y):ctx2d.lineTo(x,y);}ctx2d.stroke();}
   waveEl.classList.add('visible');drawIdleWave();
   btn.addEventListener('click',async()=>{initAudio();if(audioCtx.state==='suspended')await audioCtx.resume();if(!isPlaying){try{await audio.play();isPlaying=true;btnIcon.textContent='🔊';btn.classList.add('playing');cancelAnimationFrame(rafId);drawWave();}catch(e){console.warn('Audio play failed:',e);btnIcon.textContent='⚠️';}}else{audio.pause();isPlaying=false;btnIcon.textContent='🔇';btn.classList.remove('playing');cancelAnimationFrame(rafId);drawIdleWave();}});
-  fetch('https://api.counterapi.dev/v1/mumsoong-production/visits/up')
+  fetch('https://countapi.mileshilliard.com/api/v1/hit/mumsoong_production_visits_2026')
     .then(r=>r.json())
-    .then(d=>{document.getElementById('count').textContent=d.count.toLocaleString();})
+    .then(d=>{document.getElementById('count').textContent=Number(d.value).toLocaleString();})
     .catch(()=>{document.getElementById('count').textContent='—';});
 </script>
 </body>

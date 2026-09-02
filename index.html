@@ -277,6 +277,29 @@ header.hero,section,footer{position:relative;z-index:2;}
 #soundwave{position:fixed;bottom:0;left:0;width:100%;height:56px;pointer-events:none;z-index:9997;opacity:0;transition:opacity 0.6s ease;}
 #soundwave.visible{opacity:1;}
 #soundwave canvas{display:block;width:100%;height:56px;}
+
+/* ===== FLOATING PHOTO BACKGROUND (added) ===== */
+.photo-floaters{position:fixed;top:0;left:0;width:100%;height:100%;overflow:hidden;z-index:1;pointer-events:none;}
+.photo-floaters .polaroid{position:absolute;bottom:-30vh;background:#fff;padding:8px 8px 26px;border-radius:8px;box-shadow:0 14px 34px rgba(10,40,70,0.28),0 2px 6px rgba(10,40,70,0.12);animation:photo-drift-up linear infinite;will-change:transform;}
+.photo-floaters .polaroid img{display:block;width:100%;height:100%;object-fit:cover;border-radius:3px;filter:saturate(0.92) contrast(1.02);}
+.photo-floaters .polaroid::after{content:"";position:absolute;left:8px;right:8px;bottom:8px;height:10px;border-radius:2px;background:linear-gradient(90deg,rgba(47,128,196,0.15),rgba(255,194,51,0.25),rgba(255,122,104,0.15));}
+@keyframes photo-drift-up{
+  0%{transform:translateY(0) rotate(var(--rot-start,-6deg));opacity:0;}
+  8%{opacity:var(--max-op,0.5);}
+  50%{transform:translateY(-58vh) translateX(var(--drift-x,18px)) rotate(var(--rot-mid,4deg));}
+  92%{opacity:var(--max-op,0.5);}
+  100%{transform:translateY(-128vh) translateX(calc(var(--drift-x,18px) * -1)) rotate(var(--rot-end,-3deg));opacity:0;}
+}
+.photo-floaters .p1{left:3%;width:118px;height:150px;--rot-start:-10deg;--rot-mid:5deg;--rot-end:-4deg;--drift-x:24px;--max-op:0.55;animation-duration:46s;animation-delay:0s;filter:blur(0.3px);}
+.photo-floaters .p2{left:20%;width:96px;height:122px;--rot-start:7deg;--rot-mid:-6deg;--rot-end:3deg;--drift-x:-16px;--max-op:0.4;animation-duration:52s;animation-delay:9s;filter:blur(0.6px);}
+.photo-floaters .p3{left:74%;width:130px;height:165px;--rot-start:-5deg;--rot-mid:6deg;--rot-end:-8deg;--drift-x:20px;--max-op:0.55;animation-duration:50s;animation-delay:5s;filter:blur(0.3px);}
+.photo-floaters .p4{left:88%;width:100px;height:127px;--rot-start:9deg;--rot-mid:-4deg;--rot-end:6deg;--drift-x:-22px;--max-op:0.4;animation-duration:44s;animation-delay:16s;filter:blur(0.6px);}
+.photo-floaters .p5{left:44%;width:108px;height:137px;--rot-start:-8deg;--rot-mid:3deg;--rot-end:-5deg;--drift-x:14px;--max-op:0.45;animation-duration:56s;animation-delay:22s;filter:blur(0.4px);}
+@media(max-width:700px){
+  .photo-floaters .polaroid{transform:scale(0.72);}
+  .photo-floaters .p1{left:-2%;}
+  .photo-floaters .p4{left:82%;}
+}
 </style>
 </head>
 <body>
@@ -293,6 +316,13 @@ header.hero,section,footer{position:relative;z-index:2;}
   <span class="b1">🌙</span><span class="b2">🎈</span><span class="b3">🪂</span>
   <span class="b4">🕊️</span><span class="b5">🚀</span><span class="b6">🪐</span>
   <span class="b7">🪁</span><span class="b8">⭐</span>
+</div>
+<div class="photo-floaters" aria-hidden="true">
+  <div class="polaroid p1"><img src="team-photo1.jpg" alt="" loading="lazy"></div>
+  <div class="polaroid p2"><img src="certificate1.jpg" alt="" loading="lazy"></div>
+  <div class="polaroid p3"><img src="equipment.jpg" alt="" loading="lazy"></div>
+  <div class="polaroid p4"><img src="certificate2.jpg" alt="" loading="lazy"></div>
+  <div class="polaroid p5"><img src="team-photo2.jpg" alt="" loading="lazy"></div>
 </div>
 <header class="hero">
   <div class="cloud-shape c1"></div><div class="cloud-shape c2"></div><div class="cloud-shape c3"></div>

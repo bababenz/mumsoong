@@ -121,6 +121,7 @@ h2::after{content:"";display:block;width:50px;height:4px;background:var(--mustar
 .services-grid.reveal.in-view .card:nth-child(4){animation-delay:0.35s;}
 .services-grid.reveal.in-view .card:nth-child(5){animation-delay:0.45s;}
 .services-grid.reveal.in-view .card:nth-child(6){animation-delay:0.55s;}
+.services-grid.reveal.in-view .card:nth-child(7){animation-delay:0.65s;}
 .pricing-grid.reveal.in-view .card:nth-child(1){animation-delay:0.05s;}
 .pricing-grid.reveal.in-view .card:nth-child(2){animation-delay:0.2s;}
 .pricing-grid.reveal.in-view .card:nth-child(3){animation-delay:0.35s;}
@@ -300,6 +301,14 @@ header.hero,section,footer{position:relative;z-index:2;}
   .photo-floaters .p1{left:-2%;}
   .photo-floaters .p4{left:82%;}
 }
+
+/* ===== CERTIFICATE VIEWER CARD (added) ===== */
+.card.cert-card{display:flex;flex-direction:column;padding-bottom:1.2rem;}
+.card.cert-card .cert-viewer{position:relative;width:100%;height:260px;margin-top:0.8rem;border-radius:12px;overflow:hidden;background:#eef5fb;border:1px solid rgba(47,128,196,0.15);box-shadow:inset 0 2px 8px rgba(10,40,70,0.08);}
+.card.cert-card .cert-viewer iframe{width:100%;height:100%;border:none;display:block;}
+.card.cert-card .cert-viewer::after{content:"เลื่อนดูใบรับรอง ⇅";position:absolute;bottom:8px;left:50%;transform:translateX(-50%);font-size:0.65rem;font-weight:700;letter-spacing:0.5px;color:var(--teal);background:rgba(255,255,255,0.92);padding:3px 10px;border-radius:20px;pointer-events:none;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+.card.cert-card .cert-fullview{display:inline-block;margin-top:0.7rem;font-size:0.8rem;font-weight:700;color:#fff;background:var(--teal);padding:6px 16px;border-radius:20px;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;}
+.card.cert-card .cert-fullview:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(47,128,196,0.35);}
 </style>
 </head>
 <body>
@@ -362,6 +371,10 @@ header.hero,section,footer{position:relative;z-index:2;}
       <div class="card"><div class="icon">🏗️</div><h3>สำรวจไซต์งาน</h3><p>ติดตามความคืบหน้าโครงการก่อสร้างจากมุมสูง</p></div>
       <div class="card"><div class="icon">🗺️</div><h3>ทำแผนที่/สำรวจที่ดิน</h3><p>ภาพถ่ายมุมสูงและแผนที่ 2D/3D เพื่อการวางแผน</p></div>
       <div class="card"><div class="icon">🦋</div><h3>ผีเสื้อบินภายในงาน</h3><p>ผีเสื้อบินภายในงาน/บินส่งแหวน สร้างความประทับใจให้งานแต่งงานและอีเวนต์พิเศษ</p></div>
+      <div class="card cert-card"><div class="icon">📜</div><h3>ใบรับรองนักบินโดรน</h3><p>ผู้ควบคุมอากาศยานไร้คนขับ ขึ้นทะเบียนกับ CAAT ถูกต้องตามกฎหมาย</p>
+        <div class="cert-viewer"><iframe src="8.Cer_%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%A7%E0%B8%B1%E0%B8%8A%E0%B8%A3%E0%B8%B0%20%E0%B8%8A%E0%B8%A1%E0%B9%83%E0%B8%88.pdf" title="ใบรับรองนักบินโดรน CAAT"></iframe></div>
+        <a class="cert-fullview" href="8.Cer_%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%A7%E0%B8%B1%E0%B8%8A%E0%B8%A3%E0%B8%B0%20%E0%B8%8A%E0%B8%A1%E0%B9%83%E0%B8%88.pdf" target="_blank" rel="noopener">📄 ดูฉบับเต็ม</a>
+      </div>
     </div>
   </section>
   <svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:60px;"><path d="M0,60 C400,0 800,60 1200,20 L1200,0 L0,0 Z" fill="#fff"/></svg>

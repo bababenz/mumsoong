@@ -181,6 +181,34 @@ h2::after{content:"";display:block;width:50px;height:4px;background:var(--mustar
 .gallery-grid.reveal.in-view .video-card:nth-child(16){animation-delay:0.9s;}
 .gallery-grid.reveal.in-view .video-card:nth-child(17){animation-delay:0.95s;}
 .gallery-grid.reveal.in-view .video-card:nth-child(18){animation-delay:1s;}
+
+/* ===== CLIP CARD — decorated iframe wrapper (added) ===== */
+.gallery-grid .clip-card{display:flex;flex-direction:column;border-radius:20px;overflow:hidden;background:linear-gradient(145deg,#0d2137,#1a3a5c,#0d2137);box-shadow:0 12px 32px rgba(0,0,0,0.3);opacity:0;transform:translateY(24px);transition:transform 0.3s ease,box-shadow 0.3s ease;}
+.gallery-grid .clip-card:hover{transform:translateY(-6px) scale(1.015);box-shadow:0 0 0 1.5px rgba(255,194,51,0.55),0 22px 46px rgba(0,0,0,0.45);}
+.gallery-grid .clip-card .video-wrap{border-radius:0;box-shadow:none;}
+.gallery-grid .clip-card .cat-badge{position:absolute;top:12px;left:12px;z-index:4;font-weight:800;font-size:0.62rem;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:20px;color:#0a1e33;box-shadow:0 2px 8px rgba(0,0,0,0.25);}
+.gallery-grid .clip-card .clip-num{position:absolute;top:12px;right:12px;z-index:4;font-size:0.62rem;font-weight:700;color:#fff;background:rgba(255,255,255,0.16);backdrop-filter:blur(4px);padding:4px 10px;border-radius:20px;border:1px solid rgba(255,255,255,0.2);}
+.gallery-grid .clip-card .clip-caption{padding:0.85rem 1rem 1.05rem;text-align:center;}
+.gallery-grid .clip-card .clip-caption .cap-title{color:#fff;font-size:0.82rem;font-weight:700;line-height:1.3;}
+.gallery-grid .clip-card .clip-caption .cap-sub{color:rgba(255,255,255,0.55);font-size:0.68rem;margin-top:3px;}
+.reveal.in-view .clip-card{animation:card-pop 0.6s ease forwards;}
+.gallery-grid.reveal.in-view .clip-card:nth-child(2){animation-delay:0.1s;}
+.gallery-grid.reveal.in-view .clip-card:nth-child(3){animation-delay:0.15s;}
+.gallery-grid.reveal.in-view .clip-card:nth-child(4){animation-delay:0.2s;}
+.gallery-grid.reveal.in-view .clip-card:nth-child(5){animation-delay:0.25s;}
+.gallery-grid.reveal.in-view .clip-card:nth-child(6){animation-delay:0.3s;}
+.gallery-grid.reveal.in-view .clip-card:nth-child(7){animation-delay:0.35s;}
+.gallery-grid.reveal.in-view .clip-card:nth-child(8){animation-delay:0.4s;}
+.gallery-grid.reveal.in-view .clip-card:nth-child(9){animation-delay:0.45s;}
+.gallery-grid.reveal.in-view .clip-card:nth-child(10){animation-delay:0.5s;}
+.gallery-grid.reveal.in-view .clip-card:nth-child(11){animation-delay:0.55s;}
+.gallery-grid.reveal.in-view .clip-card:nth-child(12){animation-delay:0.6s;}
+.gallery-grid.reveal.in-view .clip-card:nth-child(13){animation-delay:0.65s;}
+.gallery-grid.reveal.in-view .clip-card:nth-child(14){animation-delay:0.7s;}
+.gallery-grid.reveal.in-view .clip-card:nth-child(15){animation-delay:0.75s;}
+.gallery-grid.reveal.in-view .clip-card:nth-child(16){animation-delay:0.8s;}
+.gallery-grid.reveal.in-view .clip-card:nth-child(17){animation-delay:0.85s;}
+.gallery-grid.reveal.in-view .clip-card:nth-child(18){animation-delay:0.9s;}
 .gallery-grid .video-card:hover{transform:translateY(-8px) scale(1.03);box-shadow:0 0 0 1.5px rgba(255,194,51,0.6),0 24px 50px rgba(0,0,0,0.45);}
 
 /* thumb art */
@@ -415,117 +443,135 @@ header.hero,section,footer{position:relative;z-index:2;}
       <h2 style="color:#fff;">ผลงานล่าสุด <span class="drone-orbit">🎥</span></h2>
       <div class="bar-wrap"><div class="bar b1"></div><div class="bar b2"></div><div class="bar b3"></div></div>
     </div>
-    <!-- ผลงานทั้งหมด 18 คลิป: การ์ดลิงก์เปิด Facebook โดยตรง (เล่นได้ชัวร์ทุกอุปกรณ์ รวมมือถือ) -->
-    <p style="text-align:center;color:rgba(255,255,255,.7);font-size:.85rem;margin:-1.6rem auto 2.2rem;max-width:420px;">แตะที่การ์ดเพื่อรับชมคลิปเต็มบน Facebook</p>
+    <!-- ผลงานทั้งหมด 18 คลิป: ฝังเล่นในหน้าเว็บด้วย Facebook video plugin -->
+    <p style="text-align:center;color:rgba(255,255,255,.7);font-size:.85rem;margin:-1.6rem auto 2.2rem;max-width:420px;">ชมคลิปผลงานมุมสูงของเราแบบเต็มอิ่ม เลื่อนดูได้ทุกคลิป</p>
     <div class="gallery-grid reveal">
-      <a class="video-card" href="https://www.facebook.com/reel/780253781721651" target="_blank" rel="noopener">
-        <div class="thumb-art"><div class="glow-orb" style="width:160px;height:160px;top:5%;left:10%;background:rgba(255,100,80,0.35);"></div><div class="glow-orb" style="width:100px;height:100px;bottom:25%;right:10%;background:rgba(47,128,196,0.35);"></div><div class="horizon"></div></div>
-        <div class="card-top"><span class="label">FEATURED</span><span class="card-num">#01</span></div>
-        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">🚁 ดูบน Facebook ↗</span></div>
-        <div class="card-content"><div class="sub">ผลงานเด่นประจำเดือน</div><div class="view-tag">ดูคลิป →</div></div>
-      </a>
-      <a class="video-card" href="https://www.facebook.com/reel/1660658905163110" target="_blank" rel="noopener">
-        <div class="thumb-art"><div class="glow-orb" style="width:140px;height:140px;top:8%;left:10%;background:rgba(174,226,255,0.3);"></div><div class="glow-orb" style="width:80px;height:80px;bottom:20%;right:5%;background:rgba(255,194,51,0.25);"></div><div class="horizon"></div></div>
-        <div class="card-top"><span class="label">HIGHLIGHTS</span><span class="card-num">#02</span></div>
-        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">🎬 ดูบน Facebook ↗</span></div>
-        <div class="card-content"><div class="sub">ไฮไลต์ผลงานมุมสูง</div><div class="view-tag">ดูคลิป →</div></div>
-      </a>
-      <a class="video-card" href="https://www.facebook.com/reel/2870578639964016" target="_blank" rel="noopener">
-        <div class="thumb-art"><div class="glow-orb" style="width:120px;height:120px;top:10%;left:15%;background:rgba(100,220,100,0.25);"></div><div class="glow-orb" style="width:90px;height:90px;bottom:22%;right:15%;background:rgba(255,122,104,0.3);"></div><div class="horizon"></div></div>
-        <div class="card-top"><span class="label">AERIAL</span><span class="card-num">#03</span></div>
-        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">🛩️ ดูบน Facebook ↗</span></div>
-        <div class="card-content"><div class="sub">ภาพมุมสูงคมชัด</div><div class="view-tag">ดูคลิป →</div></div>
-      </a>
-      <a class="video-card" href="https://www.facebook.com/reel/996234299926107" target="_blank" rel="noopener">
-        <div class="thumb-art"><div class="glow-orb" style="width:150px;height:150px;top:5%;left:5%;background:rgba(255,100,80,0.2);"></div><div class="glow-orb" style="width:70px;height:70px;bottom:30%;right:10%;background:rgba(174,226,255,0.3);"></div><div class="horizon"></div></div>
-        <div class="card-top"><span class="label">CINEMATIC</span><span class="card-num">#04</span></div>
-        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">🎥 ดูบน Facebook ↗</span></div>
-        <div class="card-content"><div class="sub">งานซีนีมาติกจากโดรน</div><div class="view-tag">ดูคลิป →</div></div>
-      </a>
-      <a class="video-card" href="https://www.facebook.com/reel/4124952197811003" target="_blank" rel="noopener">
-        <div class="thumb-art"><div class="glow-orb" style="width:110px;height:110px;top:15%;left:5%;background:rgba(255,200,50,0.3);"></div><div class="glow-orb" style="width:90px;height:90px;bottom:20%;right:12%;background:rgba(100,200,100,0.2);"></div><div class="horizon"></div></div>
-        <div class="card-top"><span class="label">TRAVEL</span><span class="card-num">#05</span></div>
-        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">🌤️ ดูบน Facebook ↗</span></div>
-        <div class="card-content"><div class="sub">ภาพบรรยากาศมุมสูง</div><div class="view-tag">ดูคลิป →</div></div>
-      </a>
-      <a class="video-card" href="https://www.facebook.com/reel/3446151738888118" target="_blank" rel="noopener">
-        <div class="thumb-art"><div class="glow-orb" style="width:140px;height:140px;top:8%;left:8%;background:rgba(255,122,104,0.25);"></div><div class="glow-orb" style="width:80px;height:80px;bottom:15%;right:8%;background:rgba(47,128,196,0.35);"></div><div class="horizon"></div></div>
-        <div class="card-top"><span class="label">ACTION</span><span class="card-num">#06</span></div>
-        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">🔥 ดูบน Facebook ↗</span></div>
-        <div class="card-content"><div class="sub">ผลงานคัดพิเศษ</div><div class="view-tag">ดูคลิป →</div></div>
-      </a>
-      <a class="video-card" href="https://www.facebook.com/reel/27530924059883352" target="_blank" rel="noopener">
-        <div class="thumb-art"><div class="glow-orb" style="width:120px;height:120px;top:10%;left:10%;background:rgba(255,80,80,0.3);"></div><div class="glow-orb" style="width:100px;height:100px;bottom:18%;right:5%;background:rgba(255,194,51,0.2);"></div><div class="horizon"></div></div>
-        <div class="card-top"><span class="label">HIGHLIGHTS</span><span class="card-num">#07</span></div>
-        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">✨ ดูบน Facebook ↗</span></div>
-        <div class="card-content"><div class="sub">ไฮไลต์ผลงานมุมสูง</div><div class="view-tag">ดูคลิป →</div></div>
-      </a>
-      <a class="video-card" href="https://www.facebook.com/reel/2530008304143244" target="_blank" rel="noopener">
-        <div class="thumb-art"><div class="glow-orb" style="width:130px;height:130px;top:6%;left:6%;background:rgba(47,128,196,0.3);"></div><div class="glow-orb" style="width:95px;height:95px;bottom:24%;right:9%;background:rgba(255,122,104,0.25);"></div><div class="horizon"></div></div>
-        <div class="card-top"><span class="label">AERIAL</span><span class="card-num">#08</span></div>
-        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">🪂 ดูบน Facebook ↗</span></div>
-        <div class="card-content"><div class="sub">ภาพมุมสูงคมชัด</div><div class="view-tag">ดูคลิป →</div></div>
-      </a>
-      <a class="video-card" href="https://www.facebook.com/reel/1060508226675862" target="_blank" rel="noopener">
-        <div class="thumb-art"><div class="glow-orb" style="width:125px;height:125px;top:12%;left:12%;background:rgba(255,194,51,0.28);"></div><div class="glow-orb" style="width:85px;height:85px;bottom:19%;right:11%;background:rgba(174,226,255,0.28);"></div><div class="horizon"></div></div>
-        <div class="card-top"><span class="label">CINEMATIC</span><span class="card-num">#09</span></div>
-        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">🎞️ ดูบน Facebook ↗</span></div>
-        <div class="card-content"><div class="sub">งานซีนีมาติกจากโดรน</div><div class="view-tag">ดูคลิป →</div></div>
-      </a>
-      <a class="video-card" href="https://www.facebook.com/reel/1395876685802810" target="_blank" rel="noopener">
-        <div class="thumb-art"><div class="glow-orb" style="width:135px;height:135px;top:7%;left:9%;background:rgba(100,220,100,0.22);"></div><div class="glow-orb" style="width:90px;height:90px;bottom:21%;right:7%;background:rgba(255,100,80,0.28);"></div><div class="horizon"></div></div>
-        <div class="card-top"><span class="label">TRAVEL</span><span class="card-num">#10</span></div>
-        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">🌈 ดูบน Facebook ↗</span></div>
-        <div class="card-content"><div class="sub">ภาพบรรยากาศมุมสูง</div><div class="view-tag">ดูคลิป →</div></div>
-      </a>
-      <a class="video-card" href="https://www.facebook.com/reel/2156383471889598" target="_blank" rel="noopener">
-        <div class="thumb-art"><div class="glow-orb" style="width:145px;height:145px;top:9%;left:7%;background:rgba(255,122,104,0.27);"></div><div class="glow-orb" style="width:75px;height:75px;bottom:23%;right:13%;background:rgba(47,128,196,0.3);"></div><div class="horizon"></div></div>
-        <div class="card-top"><span class="label">ACTION</span><span class="card-num">#11</span></div>
-        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">💨 ดูบน Facebook ↗</span></div>
-        <div class="card-content"><div class="sub">ผลงานคัดพิเศษ</div><div class="view-tag">ดูคลิป →</div></div>
-      </a>
-      <a class="video-card" href="https://www.facebook.com/reel/1672670740616866" target="_blank" rel="noopener">
-        <div class="thumb-art"><div class="glow-orb" style="width:160px;height:160px;top:5%;left:10%;background:rgba(255,100,80,0.35);"></div><div class="glow-orb" style="width:100px;height:100px;bottom:25%;right:10%;background:rgba(47,128,196,0.35);"></div><div class="horizon"></div></div>
-        <div class="card-top"><span class="label">HIGHLIGHTS</span><span class="card-num">#12</span></div>
-        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">💦 Water Fight</span></div>
-        <div class="card-content"><div class="sub">MaeSotWaterFight 2026 🔥</div><div class="view-tag">ดูคลิป →</div></div>
-      </a>
-      <a class="video-card" href="https://www.facebook.com/reel/978228678286875" target="_blank" rel="noopener">
-        <div class="thumb-art"><div class="glow-orb" style="width:140px;height:140px;top:8%;right:10%;background:rgba(174,226,255,0.3);"></div><div class="glow-orb" style="width:80px;height:80px;bottom:20%;left:5%;background:rgba(255,194,51,0.25);"></div><div class="horizon"></div></div>
-        <div class="card-top"><span class="label">HIGHLIGHTS</span><span class="card-num">#13</span></div>
-        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">☔ Rainy Season</span></div>
-        <div class="card-content"><div class="sub">rainy season! ☔💙</div><div class="view-tag">ดูคลิป →</div></div>
-      </a>
-      <a class="video-card" href="https://www.facebook.com/reel/1789515795756219" target="_blank" rel="noopener">
-        <div class="thumb-art"><div class="glow-orb" style="width:120px;height:120px;top:10%;left:15%;background:rgba(100,220,100,0.25);"></div><div class="glow-orb" style="width:90px;height:90px;bottom:22%;right:15%;background:rgba(255,122,104,0.3);"></div><div class="horizon"></div></div>
-        <div class="card-top"><span class="label">AERIAL</span><span class="card-num">#14</span></div>
-        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">🛣️ Highway</span></div>
-        <div class="card-content"><div class="sub">บ.แม่ปิงพนากิจ-ทางหลวง3114🛣️</div><div class="view-tag">ดูคลิป →</div></div>
-      </a>
-      <a class="video-card" href="https://www.facebook.com/reel/1305532238181304" target="_blank" rel="noopener">
-        <div class="thumb-art"><div class="glow-orb" style="width:150px;height:150px;top:5%;left:5%;background:rgba(255,100,80,0.2);"></div><div class="glow-orb" style="width:70px;height:70px;bottom:30%;right:10%;background:rgba(174,226,255,0.3);"></div><div class="horizon"></div></div>
-        <div class="card-top"><span class="label">AERIAL</span><span class="card-num">#15</span></div>
-        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">👹 วัดศรีพรเพ็ญ</span></div>
-        <div class="card-content"><div class="sub">น่านฟ้าแม่กาษาวัดศรีพรเพ็ญมาตยาราม 👹</div><div class="view-tag">ดูคลิป →</div></div>
-      </a>
-      <a class="video-card" href="https://www.facebook.com/reel/1865320887521017" target="_blank" rel="noopener">
-        <div class="thumb-art"><div class="glow-orb" style="width:110px;height:110px;top:15%;right:5%;background:rgba(255,200,50,0.3);"></div><div class="glow-orb" style="width:90px;height:90px;bottom:20%;left:12%;background:rgba(100,200,100,0.2);"></div><div class="horizon"></div></div>
-        <div class="card-top"><span class="label">CINEMATIC</span><span class="card-num">#16</span></div>
-        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">🌞 แม่ตะลอ</span></div>
-        <div class="card-content"><div class="sub">แม่ตะลอตีนธาตุ🌞</div><div class="view-tag">ดูคลิป →</div></div>
-      </a>
-      <a class="video-card" href="https://www.facebook.com/reel/2294617764350910" target="_blank" rel="noopener">
-        <div class="thumb-art"><div class="glow-orb" style="width:140px;height:140px;top:8%;left:8%;background:rgba(255,122,104,0.25);"></div><div class="glow-orb" style="width:80px;height:80px;bottom:15%;right:8%;background:rgba(47,128,196,0.35);"></div><div class="horizon"></div></div>
-        <div class="card-top"><span class="label">TRAVEL</span><span class="card-num">#17</span></div>
-        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">🌅 เชียงคาน</span></div>
-        <div class="card-content"><div class="sub">เชียงคาน🌅</div><div class="view-tag">ดูคลิป →</div></div>
-      </a>
-      <a class="video-card" href="https://www.facebook.com/reel/818801451151204" target="_blank" rel="noopener">
-        <div class="thumb-art"><div class="glow-orb" style="width:120px;height:120px;top:10%;right:10%;background:rgba(255,80,80,0.3);"></div><div class="glow-orb" style="width:100px;height:100px;bottom:18%;left:5%;background:rgba(255,194,51,0.2);"></div><div class="horizon"></div></div>
-        <div class="card-top"><span class="label">ACTION</span><span class="card-num">#18</span></div>
-        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">🏍️ FPV Action</span></div>
-        <div class="card-content"><div class="sub">Action🏍️</div><div class="view-tag">ดูคลิป →</div></div>
-      </a>
+      <div class="clip-card">
+        <div class="video-wrap">
+          <div class="live-badge"><span class="dot"></span>FEATURED</div><span class="clip-num">#01</span>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F780253781721651%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="clip-caption"><div class="cap-title">ผลงานเด่นประจำเดือน</div><div class="cap-sub">ชมคลิปมุมสูงคัดพิเศษ</div></div>
+      </div>
+      <div class="clip-card">
+        <div class="video-wrap">
+          <span class="cat-badge" style="background:var(--mustard);">HIGHLIGHTS</span><span class="clip-num">#02</span>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1660658905163110%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="clip-caption"><div class="cap-title">ไฮไลต์ผลงานมุมสูง</div><div class="cap-sub">บรรยากาศสวยจากมุมสูง</div></div>
+      </div>
+      <div class="clip-card">
+        <div class="video-wrap">
+          <span class="cat-badge" style="background:var(--skylight);">AERIAL</span><span class="clip-num">#03</span>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2870578639964016%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="clip-caption"><div class="cap-title">ภาพมุมสูงคมชัด</div><div class="cap-sub">ถ่ายทอดทุกมุมมองชัดเจน</div></div>
+      </div>
+      <div class="clip-card">
+        <div class="video-wrap">
+          <span class="cat-badge" style="background:var(--teal);">CINEMATIC</span><span class="clip-num">#04</span>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F996234299926107%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="clip-caption"><div class="cap-title">งานซีนีมาติกจากโดรน</div><div class="cap-sub">สไตล์ภาพยนตร์เหนือระดับ</div></div>
+      </div>
+      <div class="clip-card">
+        <div class="video-wrap">
+          <span class="cat-badge" style="background:var(--mustard);">TRAVEL</span><span class="clip-num">#05</span>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F4124952197811003%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="clip-caption"><div class="cap-title">ภาพบรรยากาศมุมสูง</div><div class="cap-sub">เก็บทุกช่วงเวลาสำคัญ</div></div>
+      </div>
+      <div class="clip-card">
+        <div class="video-wrap">
+          <span class="cat-badge" style="background:var(--coral);">ACTION</span><span class="clip-num">#06</span>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F3446151738888118%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="clip-caption"><div class="cap-title">ผลงานคัดพิเศษ</div><div class="cap-sub">ความเร็วและความคมชัด</div></div>
+      </div>
+      <div class="clip-card">
+        <div class="video-wrap">
+          <span class="cat-badge" style="background:var(--mustard);">HIGHLIGHTS</span><span class="clip-num">#07</span>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F27530924059883352%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="clip-caption"><div class="cap-title">ไฮไลต์ผลงานมุมสูง</div><div class="cap-sub">มุมมองที่หาไม่ได้จากพื้นดิน</div></div>
+      </div>
+      <div class="clip-card">
+        <div class="video-wrap">
+          <span class="cat-badge" style="background:var(--skylight);">AERIAL</span><span class="clip-num">#08</span>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2530008304143244%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="clip-caption"><div class="cap-title">ภาพมุมสูงคมชัด</div><div class="cap-sub">รายละเอียดครบทุกองศา</div></div>
+      </div>
+      <div class="clip-card">
+        <div class="video-wrap">
+          <span class="cat-badge" style="background:var(--teal);">CINEMATIC</span><span class="clip-num">#09</span>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1060508226675862%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="clip-caption"><div class="cap-title">งานซีนีมาติกจากโดรน</div><div class="cap-sub">เล่าเรื่องผ่านภาพมุมสูง</div></div>
+      </div>
+      <div class="clip-card">
+        <div class="video-wrap">
+          <span class="cat-badge" style="background:var(--mustard);">TRAVEL</span><span class="clip-num">#10</span>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1395876685802810%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="clip-caption"><div class="cap-title">ภาพบรรยากาศมุมสูง</div><div class="cap-sub">สัมผัสบรรยากาศแบบใกล้ชิด</div></div>
+      </div>
+      <div class="clip-card">
+        <div class="video-wrap">
+          <span class="cat-badge" style="background:var(--coral);">ACTION</span><span class="clip-num">#11</span>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2156383471889598%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="clip-caption"><div class="cap-title">ผลงานคัดพิเศษ</div><div class="cap-sub">ความเคลื่อนไหวที่น่าตื่นเต้น</div></div>
+      </div>
+      <div class="clip-card">
+        <div class="video-wrap">
+          <span class="cat-badge" style="background:var(--mustard);">HIGHLIGHTS</span><span class="clip-num">#12</span>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1672670740616866%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="clip-caption"><div class="cap-title">MaeSotWaterFight 2026 🔥</div><div class="cap-sub">💦 Water Fight</div></div>
+      </div>
+      <div class="clip-card">
+        <div class="video-wrap">
+          <span class="cat-badge" style="background:var(--mustard);">HIGHLIGHTS</span><span class="clip-num">#13</span>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F978228678286875%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="clip-caption"><div class="cap-title">rainy season! ☔💙</div><div class="cap-sub">☔ Rainy Season</div></div>
+      </div>
+      <div class="clip-card">
+        <div class="video-wrap">
+          <span class="cat-badge" style="background:var(--skylight);">AERIAL</span><span class="clip-num">#14</span>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1789515795756219%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="clip-caption"><div class="cap-title">บ.แม่ปิงพนากิจ-ทางหลวง3114🛣️</div><div class="cap-sub">🛣️ Highway</div></div>
+      </div>
+      <div class="clip-card">
+        <div class="video-wrap">
+          <span class="cat-badge" style="background:var(--skylight);">AERIAL</span><span class="clip-num">#15</span>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1305532238181304%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="clip-caption"><div class="cap-title">น่านฟ้าแม่กาษาวัดศรีพรเพ็ญมาตยาราม 👹</div><div class="cap-sub">👹 วัดศรีพรเพ็ญ</div></div>
+      </div>
+      <div class="clip-card">
+        <div class="video-wrap">
+          <span class="cat-badge" style="background:var(--teal);">CINEMATIC</span><span class="clip-num">#16</span>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1865320887521017%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="clip-caption"><div class="cap-title">แม่ตะลอตีนธาตุ🌞</div><div class="cap-sub">🌞 แม่ตะลอ</div></div>
+      </div>
+      <div class="clip-card">
+        <div class="video-wrap">
+          <span class="cat-badge" style="background:var(--mustard);">TRAVEL</span><span class="clip-num">#17</span>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2294617764350910%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="clip-caption"><div class="cap-title">เชียงคาน🌅</div><div class="cap-sub">🌅 เชียงคาน</div></div>
+      </div>
+      <div class="clip-card">
+        <div class="video-wrap">
+          <span class="cat-badge" style="background:var(--coral);">ACTION</span><span class="clip-num">#18</span>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F818801451151204%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="clip-caption"><div class="cap-title">Action🏍️</div><div class="cap-sub">🏍️ FPV Action</div></div>
+      </div>
     </div>
   </section>
   <svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:60px;"><path d="M0,20 C400,60 800,0 1200,40 L1200,60 L0,60 Z" fill="#2f80c4"/></svg>
